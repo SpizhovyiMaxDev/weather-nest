@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name = "description" content = "Weather data analytics, save weather info, compare with the current weather..." />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,700&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="icon" href="logo/logo.png"/>
+    <link rel = 'logo-apple-touch' href = "logo/logo-apple-touch.png"
+    <link rel = "manifest" href = "manifest.webmanifest"/>
+    <!-- Styles -->
+    <link rel="stylesheet" href = "src/sass/main.scss"/> 
+    <!-- icons -->
+    <script defer  src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- functionality -->
+    <script defer type = "module" src = "src/js/controller.js"></script>
+    <!-- Title -->
+    <title>WeatherNest &rarr; Your Daily Weather Analysis Companion for Comprehensive Weather Insights</title>
+</head>
+<body>
+    <div class = "container"> 
+
+        <!----------------------->
+        <!-- Navigation -->
+        <!----------------------->
+        <header class = "navigation">
+            <!-- img -->
+            <img class = "logo-img" src = "logo/logotype.png" /> 
+
+            <!-- form -->
+           <form class = "navigation-search">
+                <input class = "navigation-search_input"type = "text" placeholder="Name of the city">
+                <button class = "navigation-search_btn">Search</button>
+           </form>
+           
+           <!-- social media links (info) -->
+           <ul class = "navigation-list">
+               <li class="navigation-list_item">
+                 <a class = "navigation-list_link" href = "https://www.instagram.com" target="_blank">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                 </a>
+               </li>
+               <li class="navigation-list_item">
+                <a class = "navigation-list_link" href = "https://www.facebook.com" target="_blank">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+               </li>
+               <li class="navigation-list_item">
+                <a class = "navigation-list_link" href = "https://twitter.com" target="_blank">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+               </li>
+           </ul>
+        </header>
+
+        <hr class="border-bottom">
+        <!----------------------->
+        <!-- Section -->
+        <!----------------------->
+        <section class = "section">
+            <div class = "cards container-small grid grid-3-cols">
+                <!-- <figure class = "card"> 
+                     <div class = "card-img-box">
+                        <img class="card-img" src = "src/img/url_to_broken_clouds_day_image.jpg">
+                        <p class="card-icon">
+                            🌅
+                        </p>
+                     </div>
+                     <div class = "card-text-box">
+                        <div class = "card-main-box">
+                            <p class="card-city">
+                               West Kelowna
+                            </p>
+                            <div class = "city-date">
+                                05/1/2023
+                            </div>
+                        </div>
+    
+                         <ul class = "data-list"> 
+                            <li> - 🌡️ Temperature</li>
+                            <li> - ⚖️ Pressure </li>
+                            <li> - 💧 Humidity </li>
+                            <li> - 💨 Wind speed </li>
+                         </ul>
+                     </div>
+                </figure>
+
+                <figure class = "card"> 
+                    <div class = "card-img-box">
+                       <img class="card-img" src = "src/img/url_to_broken_clouds_day_image.jpg">
+                       <p class="card-icon">
+                           🌅
+                       </p>
+                    </div>
+                    <div class = "card-text-box">
+                       <div class = "card-main-box">
+                           <p class="card-city">
+                              West Kelowna
+                           </p>
+                           <div class = "city-date">
+                               05/1/2023
+                           </div>
+                       </div>
+   
+                        <ul class = "data-list"> 
+                           <li> - 🌡️ Temperature</li>
+                           <li> - ⚖️ Pressure </li>
+                           <li> - 💧 Humidity </li>
+                           <li> - 💨 Wind speed </li>
+                        </ul>
+                        <button class = "btn-active">
+                            Save
+                        </button>
+                    </div>
+               </figure> -->
+            </div>
+        </section>
+
+
+        <!----------------------->
+        <!-- Footer -->
+        <!----------------------->
+        <footer class="footer">
+          <p class = "copyright">Max Portfolio</p>  
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,97 @@
+/*
+-FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+        Fonts for the norman text: 16 / 18 / 20 / 24 / 30 ;
+        Fonts for the long text (like a blog post):  20 / 24 / 30 / 36 / 44 
+        Fonts for the headlines:  52 / 62 / 74 / 86 / 98 and bold 600+
+
+*/
+
+$radius:10px;
+
+.navigation{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height:100px;
+}
+
+/*---------------------------------------------------------*/
+/* ------- Search Block --------*/
+/*---------------------------------------------------------*/
+.navigation-search{
+    display: flex;
+    justify-content: center;
+
+    &_input {
+        font-size: 1.8rem;
+        padding: 1rem;
+        border-top-left-radius: $radius;
+        border-bottom-left-radius: $radius;
+        border: 1px solid #ccc;
+        border-right: none;
+        transition: border-color 0.2s;
+        background-color: #fff; 
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        color: #777;
+        font-family: italic, sans-serif;
+
+        &:focus {
+          outline: none;
+          border-color: #777;
+        }
+
+        &::placeholder{
+            color: var(--gray-color);
+        }
+      }
+      
+
+    &_btn{
+      padding: 0 2rem;
+      border-top-right-radius: $radius;
+      border-bottom-right-radius: $radius;
+      font-size: 1.4rem;
+      background-color: var(--main-color);
+      border: 1px solid #7397b36b !important;
+      border-left: none !important;
+      border:none;
+      color: #fff;
+      font-family: italic, serif;
+    }
+}
+
+/*---------------------------------------------------------*/
+/* ------- Social Media Container+Links --------*/
+/*---------------------------------------------------------*/
+.logo-img{
+    margin-top: 1rem;
+    width: 15rem;
+    height: 10rem;
+}
+
+/*---------------------------------------------------------*/
+/* ------- Social Media Container+Links --------*/
+/*---------------------------------------------------------*/
+.navigation-list{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    &_item{
+        font-size: 3rem;
+    }
+     
+    &_link:link,
+    &_link:active{
+       text-decoration: none;
+       color: var(--gray-color);
+    }
+
+    &_link:hover,
+    &_link:visited{
+      color: #333;
+    }
+}

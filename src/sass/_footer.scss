@@ -1,0 +1,11 @@
+.footer{
+    height: 100px;
+    position: relative;
+}
+
+.copyright{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

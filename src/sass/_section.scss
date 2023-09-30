@@ -1,0 +1,60 @@
+
+.section{
+    height: 950px;
+    overflow: scroll;
+}
+
+.card{
+    border-radius: 10px;
+    box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+    overflow: hidden;
+}
+
+.card-city{
+    font-size: 2rem;
+}
+
+.card-main-box{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom:2rem;
+}
+
+.city-date{
+    font-size:1.2rem;
+}
+
+.card-text-box{
+    padding:1.5rem 2rem;
+}
+
+.card-img-box{
+    position:relative;
+}
+
+.card-img{
+    width: 100%;
+    height: 100%;
+}
+
+.data-list{
+    list-style: none;
+    padding: 0 2rem;
+    line-height: 1.5;
+}
+
+.card-icon{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+
+.btn-active{
+    font-size: 1.4rem;
+    padding: 0.5rem 2rem;
+    margin: 10px 0px 10px 20px;
+    background-color: var(--main-color);
+    border:1px solid rgba(158, 158, 255, 0.554);
+    border-radius: 5px;
+}
