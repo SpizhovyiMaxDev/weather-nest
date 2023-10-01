@@ -1,4 +1,4 @@
-import AJAX from "./helper"
+import { AJAX, generateRandomId } from "./helper"
 import { USER_POSITION_LINK, WEATHER_API_LINK } from "./config"
 
 
@@ -8,6 +8,8 @@ export const state = {
         coords:[],
         data:{}
     },
+    currentCard:{},
+    allCards:[],
 }
 
 function getUserCoords(){
@@ -17,7 +19,7 @@ function getUserCoords(){
      })    
 }
 
-
+/* User functions */
 export async function setUserData(){
     try{
     const data = await getUserCoords();
@@ -31,15 +33,45 @@ export async function setUserData(){
 
 export async function setUserWeatherInfo(lat, lng){
     try{
-     const data = await AJAX(`${USER_POSITION_LINK}reverse?lat=${lat}&lon=${lng}&format=json`);
-     state.userData.city = data.address.city;
-     const city = data.address.city;
-     const weatherInfo = await AJAX(WEATHER_API_LINK.replace('${city}', city));
-     state.userData.data = weatherInfo
+     const city = await getCityName(lat, lng)
+     const weatherInfo = await getCityWeather(city);
+     state.userData.city = city;
+     state.userData.data = weatherInfo;
     } catch(err){
         throw err;
     }
 }
 
+/* Cards functions */
+export async function setCardData(city){
+    try{
+        const weatherInfo =  await AJAX(WEATHER_API_LINK.replace('${city}', city));
+        weatherInfo.id = generateRandomId();
+        weatherInfo.saved = false;
+        weatherInfo.date = new Date().toDateString();
+        state.currentCard = weatherInfo;
+        state.allCards.push(weatherInfo);
+    } catch(err){
+        throw new Error();
+    }
+}
 
+/* Reausable Functions */
 
+async function getCityName(lat, lng){
+    try{
+        const dataAboutCity = await AJAX(`${USER_POSITION_LINK}reverse?lat=${lat}&lon=${lng}&format=json`);
+        return dataAboutCity.address.city;
+    } catch(err){
+        throw err
+    }
+}
+
+async function getCityWeather(city){
+    try{
+        const weatherInfo = await AJAX(WEATHER_API_LINK.replace('${city}', city));
+        return weatherInfo;
+    } catch (err){
+        throw err
+    }
+} 

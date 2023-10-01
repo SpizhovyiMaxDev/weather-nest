@@ -9,4 +9,8 @@ export default class View{
        this._parentElement.insertAdjacentHTML('afterbegin', markup);
     }
 
+
+    renderError(err = this._errorMessage){
+        alert(err);
+    }
 }

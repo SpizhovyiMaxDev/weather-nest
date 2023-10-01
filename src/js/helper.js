@@ -5,10 +5,10 @@ function sleep(time){
 }
 
 
-export default async function AJAX(url){
+export async function AJAX(url){
     try{
 
-    const response = await Promise.race([fetch(url), sleep(5)]);
+    const response = await Promise.race([fetch(url), sleep(2)]);
     const data = await response.json();
     
     if(!response.ok)
@@ -20,3 +20,5 @@ export default async function AJAX(url){
         throw err;
     }
 }
+
+export const generateRandomId = (length) => [...Array(length)].map(() => Math.random().toString(36)[2]).join('');

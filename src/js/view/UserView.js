@@ -5,6 +5,7 @@ import { weatherEmoji, weatherImages } from "../config";
 
 class RenderUserView extends View{
     _parentElement = document.querySelector('.cards');
+    _errorMessage = 'Something wrong with user card geolocation, \n or something happend with our server. \n please visit our website later or check \n if you allowed the browser to get your \n geolocation coordinates'
 
     _generateMarkup(){
         const data = this._data.data;

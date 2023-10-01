@@ -45,4 +45,3 @@ export const weatherEmoji = {
 //imgur
 
 
-export const generateRandomId = (length) => [...Array(length)].map(() => Math.random().toString(36)[2]).join('');
