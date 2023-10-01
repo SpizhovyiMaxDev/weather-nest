@@ -56,6 +56,11 @@ export async function setCardData(city){
     }
 }
 
+export function updateCards(card){
+    if(!card.saved)card.saved = true;
+    else card.saved = false;
+}
+
 /* Reausable Functions */
 
 async function getCityName(lat, lng){

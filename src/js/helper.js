@@ -21,4 +21,4 @@ export async function AJAX(url){
     }
 }
 
-export const generateRandomId = (length) => [...Array(length)].map(() => Math.random().toString(36)[2]).join('');
+export const generateRandomId = () => [...Array(5)].map(() => 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'[Math.floor(Math.random() * 62)]).join('');

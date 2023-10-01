@@ -6,7 +6,8 @@ import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 import { async } from 'regenerator-runtime';
 import UserView from './view/UserView.js';
-import RenderCard from './view/RenderCardView'
+import RenderCard from './view/RenderCardView';
+import UpdateCard from './view/UpdateCard';
 
 
 async function setUsetCity(){
@@ -35,9 +36,19 @@ async function setNewCards(city){
     }
 }
 
+function saveCard(id){
+    const card = model.state.allCards.find(card => card.id === id);
+    // Update the array of datas
+    model.updateCards(card);
+
+    // Update cards in view
+    RenderCard.update(card);
+}
+
 function init(){
    RenderUserView.addHandlerRenderUserCity(setUsetCity);
-   CardsView.addHandlerRenderCards(setNewCards)
+   CardsView.addHandlerRenderCards(setNewCards);
+   UpdateCard.addHandlerUpdateCard(saveCard);
 }
 
 init();
