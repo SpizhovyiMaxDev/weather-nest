@@ -43,6 +43,8 @@ function saveCard(id){
 
     // Update cards in view
     RenderCard.update(card);
+
+    console.log(model.state.allCards)
 }
 
 function init(){
