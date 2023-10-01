@@ -10,6 +10,7 @@ export const state = {
     },
     currentCard:{},
     allCards:[],
+    savedCards:[],
 }
 
 function getUserCoords(){
@@ -57,8 +58,17 @@ export async function setCardData(city){
 }
 
 export function updateCards(card){
-    if(!card.saved)card.saved = true;
-    else card.saved = false;
+    if(!card.saved){
+        card.saved = true;
+        state.savedCards.push(card);
+        persistData();
+    }
+    else{
+        card.saved = false;
+        const index = state.savedCards.findIndex(c => c.id === card.id);
+        state.savedCards.splice(index, 1);
+        persistData();
+    }
 }
 
 /* Reausable Functions */
@@ -80,3 +90,15 @@ async function getCityWeather(city){
         throw err
     }
 } 
+
+function persistData(){
+    localStorage.setItem('weatherInfo', JSON.stringify(state.savedCards));
+}
+
+function init(){
+    const data = JSON.parse(localStorage.getItem('weatherInfo'));
+    if(!data)return;
+    state.savedCards.push(...data);
+}
+
+init()
