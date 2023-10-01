@@ -24,7 +24,7 @@ class RenderUserView extends View{
                       ${data.name}
                     </p>
                     <div class = "city-date">
-                        05/1/2023
+                        ${data.date}
                     </div>
                 </div>
                 <ul class = "data-list"> 

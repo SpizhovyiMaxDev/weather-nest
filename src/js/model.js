@@ -38,6 +38,7 @@ export async function setUserWeatherInfo(lat, lng){
      const weatherInfo = await getCityWeather(city);
      state.userData.city = city;
      state.userData.data = weatherInfo;
+     state.userData.data.date = new Date().toDateString();
     } catch(err){
         throw err;
     }
