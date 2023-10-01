@@ -8,6 +8,7 @@ import { async } from 'regenerator-runtime';
 import UserView from './view/UserView.js';
 import RenderCard from './view/RenderCardView';
 import UpdateCard from './view/UpdateCard';
+import RenderSavedCards from './view/RenderSavedCards';
 
 
 async function setUsetCity(){
@@ -47,10 +48,15 @@ function saveCard(id){
     console.log(model.state.allCards)
 }
 
+function renderSavedCards(){
+   RenderSavedCards.render(model.state.allCards)
+}
+
 function init(){
    RenderUserView.addHandlerRenderUserCity(setUsetCity);
    CardsView.addHandlerRenderCards(setNewCards);
    UpdateCard.addHandlerUpdateCard(saveCard);
+   RenderSavedCards.addHandlerRenderSavedCards(renderSavedCards)
 }
 
 init();

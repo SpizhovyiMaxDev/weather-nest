@@ -99,6 +99,7 @@ function init(){
     const data = JSON.parse(localStorage.getItem('weatherInfo'));
     if(!data)return;
     state.savedCards.push(...data);
+    state.allCards.push(...data);
 }
 
 init()
