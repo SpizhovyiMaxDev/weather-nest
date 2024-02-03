@@ -47,7 +47,8 @@ export async function setUserWeatherInfo(lat, lng){
 /* Cards functions */
 export async function setCardData(city){
     try{
-        const weatherInfo =  await AJAX(WEATHER_API_LINK.replace('${city}', city));
+    //    const weatherInfo =  await AJAX(WEATHER_API_LINK.replace('${city}', city));
+        const weatherInfo = await getCityWeather(city);
         weatherInfo.id = generateRandomId();
         weatherInfo.saved = false;
         weatherInfo.date = new Date().toDateString();
@@ -73,7 +74,6 @@ export function updateCards(card){
 }
 
 /* Reausable Functions */
-
 async function getCityName(lat, lng){
     try{
         const dataAboutCity = await AJAX(`${USER_POSITION_LINK}reverse?lat=${lat}&lon=${lng}&format=json`);
@@ -88,7 +88,7 @@ async function getCityWeather(city){
         const weatherInfo = await AJAX(WEATHER_API_LINK.replace('${city}', city));
         return weatherInfo;
     } catch (err){
-        throw err
+        throw err;
     }
 } 
 
