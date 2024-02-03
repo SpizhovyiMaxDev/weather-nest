@@ -47,7 +47,6 @@ export async function setUserWeatherInfo(lat, lng){
 /* Cards functions */
 export async function setCardData(city){
     try{
-    //    const weatherInfo =  await AJAX(WEATHER_API_LINK.replace('${city}', city));
         const weatherInfo = await getCityWeather(city);
         weatherInfo.id = generateRandomId();
         weatherInfo.saved = false;
