@@ -11,9 +11,9 @@ class RenderCard extends View{
   
    return  `
    <figure class = "card"> 
-   <div class = "card-img-box">
-      <img class="card-img" src = "${weatherImages[data.weather[0].icon]}">
-      <p class="card-icon">
+   <div class = "card__img-box">
+      <img class="card__img" src = "${weatherImages[data.weather[0].icon]}">
+      <p class="card__icon">
           🌅
       </p>
    </div>
