@@ -45,11 +45,29 @@ $gray-color:#555;
     overflow: hidden;
     background-color: #fff;
     box-shadow: 0 2rem 6rem .5rem rgba(97,85,81,.2);
+         
+    @media(max-width:75em){
+      height: 100vh;
+      margin: 0;
+      border-radius: 0;
+    }
  }
 
 .container-small {
    max-width: 100rem;
    margin: 2vw auto;
+
+   @media(max-width:75em) {
+     max-width: 60rem;
+   }
+        
+   @media (max-width:42em) {
+    max-width: 17em;
+   }
+        
+   @media (max-width:20em) {
+    max-width: 14em;
+   }
 }
 
  .grid{
@@ -59,6 +77,12 @@ $gray-color:#555;
 
  .grid-3-cols{
    grid-template-columns: repeat(3, 1fr);
+   @media(max-width:75em){
+    grid-template-columns: repeat(2, 1fr);
+   }
+   @media (max-width:42em) {
+    grid-template-columns: 1fr;
+   }
  }
 
  .border-bottom{
