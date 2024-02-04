@@ -40,7 +40,7 @@ $radius:10px;
         }
 
         &::placeholder{
-            color: var(--gray-color);
+            color: $gray-color;
         }
       }
       
@@ -50,7 +50,7 @@ $radius:10px;
       border-top-right-radius: $radius;
       border-bottom-right-radius: $radius;
       font-size: 1.4rem;
-      background-color: var(--main-color);
+      background-color: $main-color;
       border: 1px solid #7397b36b !important;
       border-left: none !important;
       border:none;
@@ -78,7 +78,7 @@ $radius:10px;
     &_link:link,
     &_link:active{
        text-decoration: none;
-       color: var(--gray-color);
+       color: $gray-color;
     }
 
     &_link:hover,
