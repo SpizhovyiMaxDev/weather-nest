@@ -30,10 +30,10 @@ async function setNewCards(city){
         await model.setCardData(city);
        
         //Set new card weather to the view
-        RenderCard.render(model.state.currentCard);
+        RenderCardView.render(model.state.currentCard);
 
     } catch(err){
-        RenderCard.renderError();
+        RenderCardView.renderError();
     }
 }
 
