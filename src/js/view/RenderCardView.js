@@ -17,8 +17,8 @@ class RenderCard extends View{
           🌅
       </p>
    </div>
-   <div class = "card-text-box">
-      <div class = "card-main-box">
+   <div class = "card__text-box">
+      <div class = "card__main-box">
           <p class="card__city">
              ${data.name}
           </p>
