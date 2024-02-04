@@ -1,6 +1,7 @@
 import View from "./View";
 import { weatherEmoji, weatherImages } from "../config";
 
+
 class RenderUserView extends View{
     _parentElement = document.querySelector('.cards');
     _errorMessage = 'Something wrong with user card geolocation, \n or something happend with our server. \n please visit our website later or check \n if you allowed the browser to get your \n geolocation coordinates'
@@ -37,7 +38,7 @@ class RenderUserView extends View{
 
     }
 
-    renderUserCityView(handler){
+    addHandlerRenderUserCity(handler){
         window.addEventListener('load', handler);
     }
 }
