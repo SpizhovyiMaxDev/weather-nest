@@ -19,16 +19,16 @@ class RenderCard extends View{
    </div>
    <div class = "card-text-box">
       <div class = "card-main-box">
-          <p class="card-city">
+          <p class="card__city">
              ${data.name}
           </p>
-          <div class = "city-date">
+          <div class = "date">
               ${data.date}
           </div>
       </div>
 
-       <ul class = "data-list"> 
-          <li>  - 🌡️ Temperature <span>${Math.floor(data.main.temp)}</li>
+       <ul class = "data__list"> 
+          <li>  - 🌡️ Temperature <span>${Math.floor(data.main.temp)} </li>
           <li> - ⚖️ Pressure <span>${data.main.pressure} </li>
           <li>  - 💧 Humidity <span>${data.main.humidity} </li>
           <li>  - 💨 Wind speed <span>${data.wind.speed} m/s </li>
