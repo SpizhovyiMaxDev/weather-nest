@@ -1,9 +1,9 @@
 .navigation{
-    padding:3rem;
     display: flex;
     align-items: center;
     justify-content: space-around;
     @media(max-width:42em){
+        padding:3rem;
         flex-direction:column;
         justify-content:center;
         gap:2rem;
