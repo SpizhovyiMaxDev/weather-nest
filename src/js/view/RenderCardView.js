@@ -34,7 +34,7 @@ class RenderCard extends View{
           <li>  - 💨 Wind speed <span>${data.wind.speed} m/s </li>
        </ul>
        <button data-id = ${data.id} class = "${saved ? 'btn-saved' : 'btn-deactivate'}">
-           ${saved ? 'saved': 'save'}
+           ${saved ? 'Saved': 'Save'}
        </button>
    </div>
 </figure> 
