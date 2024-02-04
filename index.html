@@ -23,44 +23,38 @@
 </head>
 <body>
     <div class = "container"> 
-
-        <!----------------------->
-        <!-- Navigation -->
-        <!----------------------->
-        <nav class = "navigation">
-            <!-- img -->
-            <img class = "logotype" src = "logo/logotype.png" alt = "logotype"/> 
-
-            <!-- form -->
-           <form class = "navigation__search">
-                <input class = "navigation__search-input"type = "text" placeholder="Name of the city">
-                <button class = "navigation__search-btn">Search</button>
-           </form>
-           
-           <!-- social media links (info) -->
-            <ul class="navigation__list">
-                <li class="navigation__list-item">
-                    <a class="navigation__list-link" href="https://www.instagram.com" target="_blank">
-                        <ion-icon name="logo-instagram"></ion-icon>
-                    </a>
-                </li>
-                <li class="navigation__list-item">
-                    <a class="navigation__list-link" href="https://www.facebook.com" target="_blank">
-                        <ion-icon name="logo-facebook"></ion-icon>
-                    </a>
-                </li>
-                <li class="navigation__list-item">
-                    <a class="navigation__list-link" href="https://twitter.com" target="_blank">
-                        <ion-icon name="logo-twitter"></ion-icon>
-                    </a>
-                </li>
-            </ul>
-        </nav>
+        <header class = "header">
+            <nav class = "navigation">
+                <img class = "logotype" src = "logo/logotype.png" alt = "logotype"/> 
+    
+               <form class = "navigation__search">
+                    <input class = "navigation__search-input"type = "text" placeholder="Name of the city">
+                    <button class = "navigation__search-btn">Search</button>
+               </form>
+               
+                <ul class="navigation__list">
+                    <li class="navigation__list-item">
+                        <a class="navigation__list-link" href="https://www.instagram.com" target="_blank">
+                            <ion-icon name="logo-instagram"></ion-icon>
+                        </a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a class="navigation__list-link" href="https://www.facebook.com" target="_blank">
+                            <ion-icon name="logo-facebook"></ion-icon>
+                        </a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a class="navigation__list-link" href="https://twitter.com" target="_blank">
+                            <ion-icon name="logo-twitter"></ion-icon>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
 
         <hr class="border-bottom">
-        <!----------------------->
-        <!-- Section -->
-        <!----------------------->
+
+        
         <section class = "section">
             <div class = "cards container-small grid grid-3-cols">
                 <!-- <figure class = "card"> 
@@ -120,10 +114,6 @@
             </div>
         </section>
 
-
-        <!----------------------->
-        <!-- Footer -->
-        <!----------------------->
         <footer class="footer">
           <p class = "copyright">Max Portfolio</p>  
         </footer>
