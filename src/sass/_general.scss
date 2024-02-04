@@ -50,13 +50,19 @@
     }
  }
 
- .container-small{
+.container-small {
    max-width: 100rem;
    margin: 2vw auto;
-   @media(max-width:75em) {
+
+   @media (max-width: 75em) {
      max-width: 60rem;
    }
- }
+
+   @media (max-width: 30em) {
+     max-width: 30rem;
+   }
+}
+
 
  .grid{
    display: grid;
