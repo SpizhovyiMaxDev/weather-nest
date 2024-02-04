@@ -1,7 +1,5 @@
 import View from "./View";
 import { weatherEmoji, weatherImages } from "../config";
-// import * as myImage from '../../img/url_to_broken_clouds_night_image.jpg'
-
 
 class RenderUserView extends View{
     _parentElement = document.querySelector('.cards');
