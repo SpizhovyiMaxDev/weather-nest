@@ -1,8 +1,13 @@
-.navigation{
+.header{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    height:100px;
+    min-height:100px;
+    @media(max-width:42em){
+        flex-direction:column;
+        justify-content:center;
+        gap:3rem;
+    }
 }
 
 .navigation__search{
