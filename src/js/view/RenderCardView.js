@@ -7,7 +7,8 @@ class RenderCard extends View{
 
  _generateMarkup(){
    const data = this._data;
-   
+   const saved = data.saved;
+  
    return  `
    <figure class = "card"> 
    <div class = "card-img-box">
@@ -32,8 +33,8 @@ class RenderCard extends View{
           <li>  - 💧 Humidity <span>${data.main.humidity} </li>
           <li>  - 💨 Wind speed <span>${data.wind.speed} m/s </li>
        </ul>
-       <button data-id = ${data.id} class = "${data.saved ? 'btn-saved' : 'btn-deactivate'}">
-           Save
+       <button data-id = ${data.id} class = "${saved ? 'btn-saved' : 'btn-deactivate'}">
+           ${saved ? 'saved': 'save'}
        </button>
    </div>
 </figure> 
