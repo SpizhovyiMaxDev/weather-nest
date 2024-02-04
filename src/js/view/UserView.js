@@ -11,22 +11,22 @@ class RenderUserView extends View{
 
         return `
         <figure class = "card"> 
-            <div class = "card-img-box">
-            <img class="card-img" src="${weatherImages[data.weather[0].icon]}" />
-            <p class="card-icon">
+            <div class = "card__img-box">
+            <img class="card__img" src="${weatherImages[data.weather[0].icon]}" />
+            <p class="card__icon">
               ${weatherEmoji[data.weather[0].icon]}
             </p>
             </div>
-            <div class = "card-text-box">
-                <div class = "card-main-box">
-                    <p class="card-city">
+            <div class = "card__text-box">
+                <div class = "card__main-box">
+                    <p class="card__city">
                       ${data.name}
                     </p>
-                    <div class = "city-date">
+                    <div class = "date">
                         ${data.date}
                     </div>
                 </div>
-                <ul class = "data-list"> 
+                <ul class = "data__list"> 
                 <li> - 🌡️ Temperature ${Math.floor(data.main.temp)} </li>
                 <li> - ⚖️ Pressure ${data.main.pressure} </li>
                 <li> - 💧 Humidity ${data.main.humidity} </li>
