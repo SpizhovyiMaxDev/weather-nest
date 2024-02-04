@@ -44,6 +44,7 @@ export default class View{
                 if (curEl.dataset.id === newEl.dataset.id &&!newEl.isEqualNode(curEl)){
                     if (curEl.tagName.toLowerCase() === 'button' && newEl.tagName.toLowerCase() === 'button') {
                         Array.from(newEl.attributes).forEach(attr => curEl.setAttribute(attr.name, attr.value));
+                        curEl.textContent = newEl.textContent;
                     }       
                 }
             })
