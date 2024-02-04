@@ -30,10 +30,9 @@
     padding: 0;
  }
 
- :root{
-    --main-color:#a5d8ff;
-    --gray-color:#555;
- }
+
+$main-color:#a5d8ff;
+$gray-color:#555;
 
  .container{
     max-width: 120rem;
@@ -43,26 +42,12 @@
     overflow: hidden;
     background-color: #fff;
     box-shadow: 0 2rem 6rem .5rem rgba(97,85,81,.2);
-
-    @media(max-width:75em){
-      height: 100vh;
-      margin: 0;
-    }
  }
 
 .container-small {
    max-width: 100rem;
    margin: 2vw auto;
-
-   @media (max-width: 75em) {
-     max-width: 60rem;
-   }
-
-   @media (max-width: 30em) {
-     max-width: 30rem;
-   }
 }
-
 
  .grid{
    display: grid;
@@ -71,12 +56,6 @@
 
  .grid-3-cols{
    grid-template-columns: repeat(3, 1fr);
-   @media(max-width:75em){
-    grid-template-columns: repeat(2, 1fr);
-   }
-   @media(max-width:46em){
-    grid-template-columns: 1fr;
-   }
  }
 
  .border-bottom{
