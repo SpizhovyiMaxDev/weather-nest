@@ -2,14 +2,14 @@ import * as model from './model';
 import  RenderUserView from './view/UserView.js';
 import View from './view/View';
 import CardsView from './view/CardsView';
+import 'core-js/stable';
+import 'regenerator-runtime/runtime';
+import { async } from 'regenerator-runtime';
 import UserView from './view/UserView.js';
 import RenderCard from './view/RenderCardView';
 import UpdateCard from './view/UpdateCard';
 import RenderSavedCards from './view/RenderSavedCards';
 
-
-// import 'regenerator-runtime/runtime';
-// import 'core-js/stable';
 
 async function setUsetCity(){
     try{
@@ -53,7 +53,7 @@ function renderSavedCards(){
 }
 
 function init(){
-   RenderUserView.renderUserCityView(setUsetCity);
+   RenderUserView.addHandlerRenderUserCity(setUsetCity);
    CardsView.addHandlerRenderCards(setNewCards);
    UpdateCard.addHandlerUpdateCard(saveCard);
    RenderSavedCards.addHandlerRenderSavedCards(renderSavedCards)
