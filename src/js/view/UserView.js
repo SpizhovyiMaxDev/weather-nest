@@ -37,7 +37,7 @@ class RenderUserView extends View{
 
     }
 
-    addHandlerRenderUserCity(handler){
+    renderUserCityView(handler){
         window.addEventListener('load', handler);
     }
 }
