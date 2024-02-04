@@ -17,11 +17,11 @@ $radius:10px;
     height:100px;
 }
 
-.navigation-search{
+.navigation__search{
     display: flex;
     justify-content: center;
 
-    &_input {
+    &-input {
         font-size: 1.8rem;
         padding: 1rem;
         border-top-left-radius: $radius;
@@ -45,7 +45,7 @@ $radius:10px;
       }
       
 
-    &_btn{
+    &-btn{
       padding: 0 2rem;
       border-top-right-radius: $radius;
       border-bottom-right-radius: $radius;
@@ -59,30 +59,30 @@ $radius:10px;
     }
 }
 
-.logo-img{
+.logotype{
     margin-top: 1rem;
     width: 15rem;
     height: 10rem;
 }
 
-.navigation-list{
+.navigation__list{
     display: flex;
     list-style: none;
     align-items: center;
     justify-content: center;
     gap: 3rem;
-    &_item{
+    &-item{
         font-size: 3rem;
     }
      
-    &_link:link,
-    &_link:active{
+    &-link:link,
+    &-link:active{
        text-decoration: none;
        color: $gray-color;
     }
 
-    &_link:hover,
-    &_link:visited{
+    &-link:hover,
+    &-link:visited{
       color: #333;
     }
 }
