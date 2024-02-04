@@ -27,7 +27,7 @@ class RenderCard extends View{
           </div>
       </div>
 
-       <ul class = "data__list"> 
+       <ul class = "card__list"> 
           <li>  - 🌡️ Temperature <span>${Math.floor(data.main.temp)} </li>
           <li> - ⚖️ Pressure <span>${data.main.pressure} </li>
           <li>  - 💧 Humidity <span>${data.main.humidity} </li>
