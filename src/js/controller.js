@@ -6,7 +6,7 @@ import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 import { async } from 'regenerator-runtime';
 import UserView from './view/UserView.js';
-import RenderCard from './view/RenderCardView';
+import RenderCardView from './view/RenderCardView';
 import UpdateCard from './view/UpdateCard';
 import RenderSavedCards from './view/RenderSavedCards';
 
@@ -43,9 +43,7 @@ function saveCard(id){
     model.updateCards(card);
 
     // Update cards in view
-    RenderCard.update(card);
-
-    console.log(model.state.allCards)
+    RenderCardView.update(card);
 }
 
 function renderSavedCards(){
