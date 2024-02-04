@@ -26,7 +26,7 @@ class RenderUserView extends View{
                         ${data.date}
                     </div>
                 </div>
-                <ul class = "data__list"> 
+                <ul class = "card__list"> 
                 <li> - 🌡️ Temperature ${Math.floor(data.main.temp)} </li>
                 <li> - ⚖️ Pressure ${data.main.pressure} </li>
                 <li> - 💧 Humidity ${data.main.humidity} </li>
