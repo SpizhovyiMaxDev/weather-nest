@@ -53,7 +53,7 @@ function renderSavedCards(){
 }
 
 function init(){
-   RenderUserView.addHandlerRenderUserCity(setUsetCity);
+   RenderUserView.renderUserCityView(setUsetCity);
    CardsView.addHandlerRenderCards(setNewCards);
    UpdateCard.addHandlerUpdateCard(saveCard);
    RenderSavedCards.addHandlerRenderSavedCards(renderSavedCards)
